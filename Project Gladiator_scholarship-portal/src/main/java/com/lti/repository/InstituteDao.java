@@ -51,7 +51,6 @@ public class InstituteDao{
 		Institute institute = (Institute) q.getSingleResult();
 		
 		return institute;
-		
 	}
 	
 	@Transactional

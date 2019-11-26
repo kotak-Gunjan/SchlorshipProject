@@ -29,8 +29,8 @@
 		<td><c:out value="${student.studentName}"/> </td>
 		<!--  <td><c:out value="${student.studentBasicDetails.fatherName}"/> </td>  Student->StudentBasicDetails-->  
 		<td><a href='<c:out value="${viewDetailsUrl}" />'>View Details</a></td>
- 		<td><a href="viewFullForm.lti" />View Details</a></td>
- 				<tr>
+<!--  		<td><a href="viewFullForm.lti" />View Details</a></td>
+ --> 				<tr>
 	
 	</c:forEach>
 

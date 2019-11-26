@@ -3,26 +3,27 @@ package com.lti.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class UserLogin {
+@Table(name="USERS")
+public class Ministry {
 
 	@Id
-	@Column(name="USER_ID")
-	private int userId;
+	@Column(name="USER_NAME")
+	private String userName;
 	
 	@Column(name="PASSWORD")
 	private String password;
-	
-	@Column(name="ROLE")
-	private String role;
 
-	public int getUserId() {
-		return userId;
+	
+
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -33,14 +34,7 @@ public class UserLogin {
 		this.password = password;
 	}
 
-	public String getRole() {
-		return role;
-	}
 
-	public void setRole(String role) {
-		this.role = role;
-	}
-	
-	
-	
 }
+
+	
