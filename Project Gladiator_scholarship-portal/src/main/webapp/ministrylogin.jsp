@@ -106,7 +106,7 @@ body {
 <div class="login-page">
   <div class="form">
       <h2>Ministry Login</h2>
-	${message}
+	${message} 
     <form class="login-form" action="ministrylogin.lti" method="post">
       <input type="text" name="username" placeholder="username"/>
       <input type="password" name="password" placeholder="password"/>
