@@ -30,7 +30,7 @@ public class InstituteTest {
 		inst.setInstituteCity("Pune");
 		inst.setInstituteState("dfhf");
 		inst.setInstitutePincode(444001);
-		inst.setStautsId("approved");
+		//inst.setStautsId("approved");
 		
 		gdao.add(inst);
 	

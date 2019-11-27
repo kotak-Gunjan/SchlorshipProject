@@ -22,9 +22,6 @@ public class ScholarshipApplication {
 	private int applicationId;
 	
 	
-	@Column(name="REASON")
-	private String reason;
-	
 	@OneToOne
 	@JoinColumn(name="STUDENT_ID")
 	private StudentReg student;
@@ -45,13 +42,7 @@ public class ScholarshipApplication {
 		this.applicationId = applicationId;
 	}
 
-	public String getReason() {
-		return reason;
-	}
 
-	public void setReason(String reason) {
-		this.reason = reason;
-	}
 
 	public StudentReg getStudent() {
 		return student;

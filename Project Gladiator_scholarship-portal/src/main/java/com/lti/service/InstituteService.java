@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.entity.Institute;
+import com.lti.entity.ScholarshipApplication;
+import com.lti.entity.Status;
 import com.lti.entity.StudentReg;
 import com.lti.repository.GenericDao;
 import com.lti.repository.InstituteDao;
@@ -54,4 +56,38 @@ public class InstituteService {
 	public StudentReg findStudentByStudentId(int studentId){
 		return instituteDao.readStudentByStudentId(studentId);
 	}
+	
+	
+	public void giveStatus(ScholarshipApplication scholarshipApply) {
+		gdao.add(scholarshipApply);
+	}
+	
+	public Status findApproveStatus(){
+		Status appstat=instituteDao.readApproveStatus();
+		return appstat;
+	
+	}
+	
+	public Status findRejectStatus(){
+		Status appstat=instituteDao.readRejectStatus();
+		return appstat;
+	
+	}
+	
+	public ScholarshipApplication getScholarshipDetails(int studentId) {
+		return instituteDao.readScholarshipDetails(studentId);
+	}
+
+	public void save(ScholarshipApplication s) {
+		 instituteDao.add(s);
+	}
+
+	public void approve(int studentId) {
+		instituteDao.approve(studentId);		
+	}
+
+	public void reject(int studentId) {
+		instituteDao.reject(studentId);		
+	}
+
 }

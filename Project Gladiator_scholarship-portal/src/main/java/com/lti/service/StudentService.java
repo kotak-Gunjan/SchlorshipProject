@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.lti.entity.Institute;
 import com.lti.entity.Scheme;
 import com.lti.entity.ScholarshipApplication;
+import com.lti.entity.Status;
 import com.lti.entity.StudentAcademic;
 import com.lti.entity.StudentBankDetails;
 import com.lti.entity.StudentBasicDetails;
@@ -69,9 +70,19 @@ public class StudentService {
 			return sobj;
 	}
 
-
-
 	public void chooseScheme(ScholarshipApplication scholarshipApply) {
 		gdao.add(scholarshipApply);
 	}
+	
+	public Status defaultStatus(){
+		
+		Status stst=studentdao.readDefaultStatus();
+		return stst;		
+	}
+	
+	public ScholarshipApplication getScholarshipDetails(int studentId) {
+		return studentdao.readScholarshipDetails(studentId);
+	}
+	
+	
 }

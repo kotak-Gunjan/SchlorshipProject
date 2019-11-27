@@ -16,15 +16,20 @@ public class Status {
 	@Column(name="STATUS_DESCRIPTION")
 	private String statusDescription;
 	
-	@OneToOne(mappedBy="status", cascade=CascadeType.ALL)
-	private ScholarshipApplication scholarshipApp;
-
 	public int getStatusId() {
 		return statusId;
 	}
 
 	public String getStatusDescription() {
 		return statusDescription;
+	}
+
+	public void setStatusId(int statusId) {
+		this.statusId = statusId;
+	}
+
+	public void setStatusDescription(String statusDescription) {
+		this.statusDescription = statusDescription;
 	}
 
 }

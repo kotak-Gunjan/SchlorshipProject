@@ -134,7 +134,7 @@ body {
 
 
 
-			<form action="" method="post" class="login-form" autocomplete="on">
+			<form   class="login-form" >
 				<h2 align="center">Details of Student</h2>
 				<table cellspacing="5px" cellpadding="5%" ; align="center">
 					<!-- Student Registration -->
@@ -406,8 +406,10 @@ body {
 							disabled /></td>
 					</tr>
 					<tr><td>
-					<input type="submit" value="Accept"/></td>
-					<td><input type="submit" value="Reject"/></td>
+<!-- 					<input <a href="accept.lti"/> type="submit" value="Accept" name="status."/></td>
+					<td><input type="submit" value="Reject" name="status.statusId"/></td> -->
+					<a  href="accept.lti">ACCEPT</a>
+					<a href="reject.lti">REJECT</a>
 					</tr>
 				</table>
 			</form>

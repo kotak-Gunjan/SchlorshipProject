@@ -112,9 +112,11 @@ body {
     <form class="login-form"  action="institutelogin.lti" method="post">
       <input type="text" name="instituteCode" placeholder="Enter Institute Code"/>
       <input type="password" name="institutePass" placeholder="password"/>
-      <button>login</button>
+      <button>login</button><br/><br/>
+      
       <!-- <p class="message">Not registered? <a href="#">Create an account</a></p> -->
     </form>
+    <button onclick="window.location.href='home.jsp'">HOME</button>
   </div>
 </div>
 </body>

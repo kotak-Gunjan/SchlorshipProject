@@ -66,6 +66,7 @@
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.show_sql">true</prop>
+				 
 			</props>
 		</property>
 	</bean>

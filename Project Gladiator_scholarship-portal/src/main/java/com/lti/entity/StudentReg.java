@@ -61,17 +61,14 @@ public class StudentReg {
 	
 	@OneToOne(mappedBy="studentReg")
 	//@NotFound(action=NotFoundAction.IGNORE)
-
 	private StudentBankDetails studentBankDetails;
 	
 	@OneToOne(mappedBy="studentReg")
 	//@NotFound(action=NotFoundAction.IGNORE)
-
 	private StudentBasicDetails studentBasicDetails;
 	
 	@OneToOne(mappedBy="studentReg")
 	//@NotFound(action=NotFoundAction.IGNORE)
-
 	private StudentDocument studentDocumentDetails;
 	
 	public int getStudentId() {

@@ -112,6 +112,8 @@ body {
  <form name="frm" class="login-form" action="schemelist.lti" method="get">
 <button type="submit">Apply For Scheme</button>
 	</form>
+	</br>
+<button onclick="window.location.href = 'home.jsp';">HOME</button>
   </div>
 </div>
 </body>

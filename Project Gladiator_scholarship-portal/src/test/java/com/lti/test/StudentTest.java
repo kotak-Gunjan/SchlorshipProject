@@ -75,7 +75,7 @@ public class StudentTest {
 		Scheme scheme= (Scheme) gdao.fetchById(Scheme.class, 2 );
 		StudentReg s=(StudentReg) gdao.fetchById(StudentReg.class, 1101);
 		ScholarshipApplication sa = new ScholarshipApplication();
-		sa.setReason("na");
+		//sa.setReason("na");
 		sa.setStudent(s);
 		sa.setScheme(scheme);
 		gdao.add(sa);

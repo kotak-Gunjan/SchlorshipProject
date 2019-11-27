@@ -31,6 +31,8 @@
                                 </div>
                               </div>
                     </form>
+                    <br/>
+                    <button onclick="window.location.href='home.jsp'">BACK</button>
 </div>
 </div>
 </body>

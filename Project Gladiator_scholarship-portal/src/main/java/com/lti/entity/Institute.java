@@ -52,8 +52,6 @@ public class Institute {
 	@Column(name="INSTITUTE_PINCODE")
 	private int institutePincode;
 	
-	@Column(name="STATUS_ID")
-	private String stautsId;
 
 	@OneToMany(mappedBy="institute", cascade=CascadeType.ALL)
 	private List <StudentReg> students;
@@ -152,14 +150,6 @@ public class Institute {
 
 	public void setInstitutePincode(int institutePincode) {
 		this.institutePincode = institutePincode;
-	}
-
-	public String getStautsId() {
-		return stautsId;
-	}
-
-	public void setStautsId(String stautsId) {
-		this.stautsId = stautsId;
 	}
 
 	public List<StudentReg> getStudents() {

@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpSession;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,11 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
-import com.lti.entity.Institute;
 import com.lti.entity.Scheme;
 import com.lti.entity.ScholarshipApplication;
+import com.lti.entity.Status;
 import com.lti.entity.StudentAcademic;
 import com.lti.entity.StudentBankDetails;
 import com.lti.entity.StudentBasicDetails;
@@ -34,6 +33,7 @@ public class StudentController {
 	
 	@Autowired
 	private StudentService studentService;
+	
 
 	@RequestMapping(path = "studentregister.lti", method = RequestMethod.POST) // register a new student
 	public String register(StudentReg studentReg,@RequestParam("sdob") String bdt )
@@ -99,8 +99,8 @@ public class StudentController {
 	}
 	
 	@RequestMapping(path = "studentdoc.lti", method = RequestMethod.POST)//upload doc
-	public String addDoc(StudentDocument studDoc, ModelMap model, 
-			@RequestParam("domicileCertificatefile") MultipartFile dom, 
+	public String addDoc(StudentDocument studDoc, ModelMap model,
+			@RequestParam("domicileCertificatefile") MultipartFile dom,
 			@RequestParam("studentPhotographfile") MultipartFile sp, 
 			@RequestParam("instituteIdCardfile") MultipartFile Iicard, 
 			@RequestParam("casteCertificatefile") MultipartFile caste, 
@@ -156,29 +156,34 @@ public class StudentController {
 		studDoc.setAadharCard(aadhar.getOriginalFilename());
 		studDoc.setClassTenthMarksheet(ten.getOriginalFilename());
 		studDoc.setClassTwelthMarksheet(twelth.getOriginalFilename());
+		
 		studentService.addDoc(studDoc);
-		return "applyForScheme.jsp";  // It should go to Apply for schemes page
+		return "afterlogin.jsp";  
 	}
 	
 	@RequestMapping(path="schemelist.lti", method=RequestMethod.GET) //view dropdown of schemes
 	public String getSchemeList(Map m){
 		
-	    List<Scheme> obj	= studentService.viewScheme();
+	    List<Scheme> obj=studentService.viewScheme();
 	    	m.put("schemelist", obj);
 	    	return "applyForScheme.jsp";
 	    	
 	    }
 	
 	
-	@RequestMapping(path="selectscheme.lti", method= RequestMethod.POST) //select scheme
-	public String selectScheme(@RequestParam("scheme.schemeId") int schemeId, ModelMap model,ScholarshipApplication apply)
+	@RequestMapping(path="selectscheme.lti", method= RequestMethod.POST) //accept or reject
+	public String selectScheme(ScholarshipApplication apply, ModelMap model)
 	{
 		StudentReg s=(StudentReg) model.get("student");
-		System.out.println(s.getStudentId());
-		System.out.println(schemeId);
-		studentService.chooseScheme(apply);
+		Status stat = studentService.defaultStatus();
+		
 		apply.setStudent(s);
+		apply.setStatus(stat);
+		
+		studentService.chooseScheme(apply);
 		return "successfullyApplied.jsp";	
 		
 	}
+	
+	
 }

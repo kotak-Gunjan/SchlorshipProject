@@ -69,25 +69,17 @@ public class StudentAcademic {
 	private int marksTwelth;
 	
 	@Column(name="ADMISSION_FEE")
-	private double admissionFee;
+	private long admissionFee;
 	
 	@Column(name="TUTION_FEE")
-	private double tuitionFee;
+	private long tuitionFee;
 	
 	@Column(name="OTHER_FEE")
-	private double otherFee;
+	private long otherFee;
 
 	@OneToOne
 	@JoinColumn(name="STUDENT_ID")
 	private StudentReg studentReg;
-	
-	public StudentReg getStudentReg() {
-		return studentReg;
-	}
-
-	public void setStudentReg(StudentReg studentReg) {
-		this.studentReg = studentReg;
-	}
 
 	public int getAcademicId() {
 		return academicId;
@@ -96,14 +88,6 @@ public class StudentAcademic {
 	public void setAcademicId(int academicId) {
 		this.academicId = academicId;
 	}
-
-//	public String getInstituteName() {
-//		return instituteName;
-//	}
-//
-//	public void setInstituteName(String instituteName) {
-//		this.instituteName = instituteName;
-//	}
 
 	public String getPresentCourse() {
 		return presentCourse;
@@ -225,29 +209,38 @@ public class StudentAcademic {
 		this.marksTwelth = marksTwelth;
 	}
 
-	public double getAdmissionFee() {
+	public long getAdmissionFee() {
 		return admissionFee;
 	}
 
-	public void setAdmissionFee(double admissionFee) {
+	public void setAdmissionFee(long admissionFee) {
 		this.admissionFee = admissionFee;
 	}
 
-	public double getTuitionFee() {
+	public long getTuitionFee() {
 		return tuitionFee;
 	}
 
-	public void setTuitionFee(double tuitionFee) {
+	public void setTuitionFee(long tuitionFee) {
 		this.tuitionFee = tuitionFee;
 	}
 
-	public double getOtherFee() {
+	public long getOtherFee() {
 		return otherFee;
 	}
 
-	public void setOtherFee(double otherFee) {
+	public void setOtherFee(long otherFee) {
 		this.otherFee = otherFee;
 	}
+
+	public StudentReg getStudentReg() {
+		return studentReg;
+	}
+
+	public void setStudentReg(StudentReg studentReg) {
+		this.studentReg = studentReg;
+	}
+	
 	
 	
 }

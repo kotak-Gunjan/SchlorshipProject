@@ -103,8 +103,13 @@ body {
 </style>
 </head>
 <body>
+<div class="login-page">
+  <div class="form">
 <h1>
 SUCCESSFULLY APPLIED!
 </h1>
+<button onclick="window.location.href = 'home.jsp';">HOME</button> 
+  </div>
+</div>
 </body>
 </html>

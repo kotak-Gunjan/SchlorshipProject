@@ -113,6 +113,8 @@ body {
       <button>login</button>
      
     </form>
+    </br>
+    <button onclick="window.location.href = 'home.jsp';">HOME</button> 
   </div>
 </div>
 </body>

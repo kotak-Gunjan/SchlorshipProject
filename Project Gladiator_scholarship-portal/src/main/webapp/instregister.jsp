@@ -103,6 +103,8 @@ body {
   background: rgb(146, 220, 250);
 }
 </style>
+
+
 </head>
 
 <body>
@@ -127,22 +129,23 @@ body {
 
                     <tr>
                         <td>Institute Name :</td>
-                        <td><input type="text" name="instituteName" required><br></td>
+                        <td><input type="text" name="instituteName" placeholder="Enter Institute Name"><br></td>
                     </tr>
+                    
 
                     <tr>
                         <td>Institute DISE Code :</td>
-                        <td><input type="text" name="instituteDISECode" pattern="[1-9]{1}[0-9]{3}" required><br></td>
+                        <td><input type="text" name="instituteDISECode" placeholder="Enter DISE Code" pattern="[1-9]{1}[0-9]{3}" required><br></td>
                     </tr>
 
                     <tr>
                         <td>University name :</td>
-                        <td><input type="text" name="universityName" required><br></td>
+                        <td><input type="text" name="universityName" placeholder="Enter University Name"  required><br></td>
                     </tr>
 
                     <tr>
                         <td>Institute Password :</td>
-                        <td><input type="password" name="institutePass"><br></td>
+                        <td><input type="password" placeholder="Enter Password" name="institutePass"><br></td>
                     </tr>
 
                     <tr>
@@ -157,22 +160,22 @@ body {
 
                     <tr>
                         <td>Institute location :</td>
-                        <td><input type="text" name="instituteLoc" required><br></td>
+                        <td><input type="text" name="instituteLoc" placeholder="Enter Location"  required><br></td>
                     </tr>
 
                     <tr>
                         <td>Institute city :</td>
-                        <td><input type="text" name="instituteCity" required><br></td>
+                        <td><input type="text" name="instituteCity" placeholder="Enter City"  required><br></td>
                     </tr>
 
                     <tr>
                         <td>Institute state :</td>
-                        <td><input type="text" name="instituteState" required><br></td>
+                        <td><input type="text" name="instituteState" placeholder="Enter State"  required><br></td>
                     </tr>
 
                     <tr>
                         <td>Institute pincode :</td>
-                        <td><input type="text" name="institutePincode" pattern="[1-9]{1}[0-9]{5}" required><br></td>
+                        <td><input type="text" name="institutePincode" placeholder="Enter PinCode (6 digits)" pattern="[1-9]{1}[0-9]{5}" required><br></td>
                     </tr>
 
             

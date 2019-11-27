@@ -151,7 +151,7 @@
         <div class="item content-2">Latest update</div>
         <div class="item content-3">Helpdesk</br>
           Contact - 9527542676</br>
-          Email - Some.mail@lntinfotech.com
+          Email - scholarshipportal@lntinfotech.com
         </div>
 </div>
 </body>

@@ -110,12 +110,12 @@ body {
 
     <form class="login-form" action="studentbasic.lti" method="post">
       <input type="text" name="community" placeholder="Community" required/>
-      <input type="text" name="religion" placeholder="Religion" required/>
-      <input type="text" name="fatherName" placeholder="Father's Name" required/>
-      <input type="text" name="fatherProfession" placeholder="Father's Profession" required/>
-      <input type="text" name="fatherIncome" placeholder="Father's Income"  required/>
-      <input type="text" name="motherName" placeholder="Mother's Name" required/>
-      <input type="text" name="motherProfession" placeholder="Mother's Profession" required/>
+      <input type="text" name="religion" placeholder="Religion"   required/>
+      <input type="text" name="fatherName" placeholder="Father's Name"   required/>
+      <input type="text" name="fatherProfession" placeholder="Father's Profession"   required/>
+      <input type="text" name="fatherIncome" placeholder="Father's Income"   required/>
+      <input type="text" name="motherName" placeholder="Mother's Name"  required/>
+      <input type="text" name="motherProfession" placeholder="Mother's Profession"   required/>
 <table>
       <tr>
           <td>Marital Status :</td>
@@ -134,10 +134,10 @@ body {
       </tr>
  </table>
       <input type="text" name="typeOfDisability" placeholder="Disability Type" >
-      <input type="text" name="locality" placeholder="Locality" required/>
-      <input type="text" name="city" placeholder="City" required/>
-      <input type="text" name="state" placeholder="State" required/>
-      <input type="text" name="pincode" placeholder="Pincode" pattern="[0-9]{1}[0-9]{5}" required/>
+      <input type="text" name="locality" placeholder="Locality"   required/>
+      <input type="text" name="city" placeholder="City"   required/>
+      <input type="text" name="state" placeholder="State"   required/>
+      <input type="text" name="pincode" placeholder="Pincode (6 digits)" pattern="[0-9]{1}[0-9]{5}" required/>
       
       <button type="submit" id="submit">Next</button>
       <!--onclick="window.location.href='bank.html'" -->

@@ -115,6 +115,8 @@ ${message}
       <button type="submit" value="login">Login</button>
       <!-- <p class="message">Not registered? <a href="#">Create an account</a></p> -->
     </form>
+    </br>
+    <button onclick="window.location.href = 'home.jsp';">HOME</button> 
   </div>
 </div>
 </body>
